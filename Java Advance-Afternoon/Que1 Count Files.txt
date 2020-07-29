@@ -1,0 +1,31 @@
+import java.io.File;
+import java.util.Scanner;
+
+public class CountFiles {
+
+    public static void main(String[] args) {
+
+    Scanner scanline=new Scanner(System.in);
+
+     System.out.println("C:\\Aryan\\directoryName");
+     String Directory=scanline.nextLine();
+     System.out.println("Your Directory is :" + Directory);
+
+    File directory = new File(Directory);
+
+    int fileCount = 0;
+    int directoryCount =0;
+     for (
+    File file : directory.listFiles()) {
+        if (file.isFile()) {
+            fileCount++;
+        }
+        if (file.isDirectory()) {
+            directoryCount++;
+        }
+
+    }
+     System.out.println("Number of files in Directory are " + fileCount+"\n and Number of Sub-directories "+directoryCount);
+
+}
+}

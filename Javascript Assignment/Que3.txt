@@ -1,0 +1,1 @@
+\n is a newline and \r is a carriage return. ... Windows uses \r\n to signify the enter key was pressed, while Linux and Unix use \n to signify that the enter key was pressed. In Unix and all Unix-like systems, \n is the code for end-of-line, \r means nothing special.

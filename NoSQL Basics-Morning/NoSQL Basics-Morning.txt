@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+Queries for Qestion 1,2 and 3 are listed below respectively:-
+
+1.	select id,name from 
+	(select id,name, (select t1.ratings.Cleanliness as c from t.reviews as t1) 
+	as cleanliness_rating  from `travel-sample` as t where type="hotel") 
+	as Hotels where cleanliness_rating[0].c>=4;
+
+2.	select country,MAX(geo.alt) as alt from `travel-sample` WHERE geo.alt IS NOT NULL GROUP BY 		geo.alt DESC;
+
+=======
+Queries for Qestion 1,2 and 3 are listed below respectively:-
+
+1.	select id,name from 
+	(select id,name, (select t1.ratings.Cleanliness as c from t.reviews as t1) 
+	as cleanliness_rating  from `travel-sample` as t where type="hotel") 
+	as Hotels where cleanliness_rating[0].c>=4;
+
+2.	select country,MAX(geo.alt) as alt from `travel-sample` WHERE geo.alt IS NOT NULL GROUP BY 		geo.alt DESC;
+
+>>>>>>> b5515d0... Adv Java
+3.	select meta().id, sourceairport, destinationairport from `travel-sample` where type='route' 		and airline="AF" and sourceairport="MRS";

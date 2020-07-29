@@ -1,0 +1,102 @@
+<<<<<<< HEAD
+<html>
+  <head>
+      <title>Array Operations</title>
+  </head>
+<body>
+
+<h1 style="font-weight: bold;">Array Operations</h1>
+
+<input type="text" id="array" placeholder="Enter Value">
+
+<button onclick="func_operation()">Enter</button>
+
+<h2 id="output1"></h2>
+<h2 id="output2"></h2>
+<h2 id="output3"></h2>
+<h2 id="output4"></h2>
+<h2 id="output"></h2>
+
+<script>
+function func_greater(element,index,array){ 
+  return element>10;
+}
+
+function func_addition(num){
+  return num = eval(num)+1;
+}
+
+function func_operation() {
+  var val = document.getElementById("array").value;
+  var arr = val.split(",");
+  console.log("Array = " + arr);
+  
+  arr = arr.sort(function(a,b){ return a-b;});
+  document.getElementById("output1").innerHTML = "Array after sorting = " + arr ;
+
+  arr = arr.filter(func_greater);
+  document.getElementById("output2").innerHTML = "Elements greater than 10 = " + arr ;
+  
+  arr = arr.map(func_addition);
+  document.getElementById("output3").innerHTML = "Elements after addition of 1 = " + arr ;
+  
+  arr = arr.splice(1,4)
+  document.getElementById("output4").innerHTML = "Elements 1 to 4 =" + arr ;
+  
+  document.getElementById("output").innerHTML = "Final output = " + arr ; 
+}
+</script>
+
+</body>
+=======
+<html>
+  <head>
+      <title>Array Operations</title>
+  </head>
+<body>
+
+<h1 style="font-weight: bold;">Array Operations</h1>
+
+<input type="text" id="array" placeholder="Enter Value">
+
+<button onclick="func_operation()">Enter</button>
+
+<h2 id="output1"></h2>
+<h2 id="output2"></h2>
+<h2 id="output3"></h2>
+<h2 id="output4"></h2>
+<h2 id="output"></h2>
+
+<script>
+function func_greater(element,index,array){ 
+  return element>10;
+}
+
+function func_addition(num){
+  return num = eval(num)+1;
+}
+
+function func_operation() {
+  var val = document.getElementById("array").value;
+  var arr = val.split(",");
+  console.log("Array = " + arr);
+  
+  arr = arr.sort(function(a,b){ return a-b;});
+  document.getElementById("output1").innerHTML = "Array after sorting = " + arr ;
+
+  arr = arr.filter(func_greater);
+  document.getElementById("output2").innerHTML = "Elements greater than 10 = " + arr ;
+  
+  arr = arr.map(func_addition);
+  document.getElementById("output3").innerHTML = "Elements after addition of 1 = " + arr ;
+  
+  arr = arr.splice(1,4)
+  document.getElementById("output4").innerHTML = "Elements 1 to 4 =" + arr ;
+  
+  document.getElementById("output").innerHTML = "Final output = " + arr ; 
+}
+</script>
+
+</body>
+>>>>>>> b5515d0... Adv Java
+</html>

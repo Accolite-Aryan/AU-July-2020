@@ -1,0 +1,146 @@
+<h1>Sort User(Click on Column)</h1>
+<table style="color:black; border: 1px solid #ddd; width: 50%; border-collapse: collapse; text-align: left;">
+    <tr>
+      <th (click) ="sortfirstName()" style="border: 1px solid #ddd; text-align: left; padding: 15px;">First Name</th>
+      <th (click) ="sortlastName()" style="border: 1px solid #ddd; text-align: left; padding: 15px;">Last Name</th>
+      <th (click) ="sortage()" style="border: 1px solid #ddd; text-align: left; padding: 15px;">Age</th>
+      <th (click) ="sortempId()" style="border: 1px solid #ddd; text-align: left; padding: 15px;">Employee Id</th>
+      <th (click) ="sortcity()" style="border: 1px solid #ddd; text-align: left; padding: 15px;">City</th>
+    </tr>
+    <tr *ngFor="let user of name">
+      <td (click) ="sortfirstName()" style="border: 1px solid #ddd; text-align: left; padding: 15px;">{{user.firstName}}</td>
+      <td (click) ="sortlastName()" style="border: 1px solid #ddd; text-align: left; padding: 15px;">{{user.lastName}}</td>
+      <td (click) ="sortage()" style="border: 1px solid #ddd; text-align: left; padding: 15px;">{{user.age}}</td>
+      <td (click) ="sortempId()" style="border: 1px solid #ddd; text-align: left; padding: 15px;">{{user.empId}}</td>
+      <td (click) ="sortcity()" style="border: 1px solid #ddd; text-align: left; padding: 15px;">{{user.city}}</td>
+    </tr>
+  </table>
+
+  <h1> Add User</h1>
+  <input [(ngModel)]='newUser.firstName' value="Input Name" placeholder="First Name"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid green;
+  border-radius: 4px;"/>
+  <input [(ngModel)]='newUser.lastName' value="Input Name" placeholder="Last Name"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid green;
+  border-radius: 4px;"/>
+  <input [(ngModel)]='newUser.age' value="Input Name" placeholder="Age"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid green;
+  border-radius: 4px;"/>
+  <input [(ngModel)]='newUser.empId' value="Input Name" placeholder="Employee Id"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid green;
+  border-radius: 4px;"/>
+  <input [(ngModel)]='newUser.city' value="Input Name" placeholder="City"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid green;
+  border-radius: 4px;"/>
+  <br>
+  <button (click) ="addUser()" 
+    style="background-color: #4CAF50;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;">Add User</button>
+
+  <h1>Edit User</h1>
+  <h2>Enter Employee ID</h2>
+  <input [(ngModel)]='editUser.empId' value="Input Name" placeholder="Employee Id"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid blue;
+  border-radius: 4px;"/>
+  <h2>Enter New Details</h2>
+  <input [(ngModel)]='editUser.firstName' value="Input Name" placeholder="First Name"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid blue;
+  border-radius: 4px;"/>
+  <input [(ngModel)]='editUser.lastName' value="Input Name" placeholder="Last Name"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid blue;
+  border-radius: 4px;"/>
+  <input [(ngModel)]='editUser.age' value="Input Name" placeholder="Age"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid blue;
+  border-radius: 4px;"/>
+  <input [(ngModel)]='editUser.city' value="Input Name" placeholder="City"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid blue;
+  border-radius: 4px;"/>
+  <br>
+  <button (click) ="updateUser()"
+  style="background-color: blue;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;">Update User</button>
+
+
+  <h1>Delete User</h1>
+  <input [(ngModel)]='delkey' value="Input Name" placeholder="Enter Employee Id"
+  style="width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;"/>
+  <br>
+  <button (click) ="deleteUser()"
+  style="background-color: red;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;">Delete</button>
+
+
+
+  <h1>User Updated : {{editUser.firstName}}</h1>

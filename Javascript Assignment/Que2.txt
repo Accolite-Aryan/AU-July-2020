@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+    })()
+    add();
+    add();
+    add();
+
+Output: 3
+
+=======
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+    })()
+    add();
+    add();
+    add();
+
+Output: 3
+
+>>>>>>> b5515d0... Adv Java
+Explaination: "add" variable is also globle however it's binded to a function like a object method, there the variable refers to function as method."counter" variable is globle, therefore it's default value is 0. Everytime add() is called the value of counter is incremented by 1.

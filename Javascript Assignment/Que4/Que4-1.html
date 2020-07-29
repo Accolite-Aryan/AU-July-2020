@@ -1,0 +1,70 @@
+<<<<<<< HEAD
+<html>
+  <head>
+      <title>Regular Expression Evaluator</title>
+  </head>
+<body>
+
+<h1 style="font-weight: bold;">RegEx Evaluator</h1>
+
+<input type="text" id="regex" value="">
+
+<button onclick="regex_eval()">Enter</button>
+
+<h1 id="regex_output"></h1>
+
+<script>
+function regex_eval() {
+  var input = document.getElementById("regex").value;
+
+  var exp = /^(hot|dot|not).*(hoot|doot|no+t)$/;
+
+  var res = exp.exec(input);
+  console.log(res);
+  if (ans == null){
+    document.getElementById("regex_output").innerHTML = "false";
+  }
+  else{
+    document.getElementById("regex_output").innerHTML = "true";
+  }
+ 
+}
+</script>
+
+</body>
+=======
+<html>
+  <head>
+      <title>Regular Expression Evaluator</title>
+  </head>
+<body>
+
+<h1 style="font-weight: bold;">RegEx Evaluator</h1>
+
+<input type="text" id="regex" value="">
+
+<button onclick="regex_eval()">Enter</button>
+
+<h1 id="regex_output"></h1>
+
+<script>
+function regex_eval() {
+  var input = document.getElementById("regex").value;
+
+  var exp = /^(hot|dot|not).*(hoot|doot|no+t)$/;
+
+  var res = exp.exec(input);
+  console.log(res);
+  if (ans == null){
+    document.getElementById("regex_output").innerHTML = "false";
+  }
+  else{
+    document.getElementById("regex_output").innerHTML = "true";
+  }
+ 
+}
+</script>
+
+</body>
+>>>>>>> b5515d0... Adv Java
+</html>
