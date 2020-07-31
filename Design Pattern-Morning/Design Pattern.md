@@ -135,6 +135,6 @@ public class InterpreterPatternDemo {
 #### Step 4
 ##### Verify the output.
 ```
-John is male? true
-Julie is a married women? true
+Java is Object? true
+Python is Imperative? true
 ```
