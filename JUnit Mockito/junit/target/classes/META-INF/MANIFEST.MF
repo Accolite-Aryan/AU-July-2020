@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Aryan
+Build-Jdk: 14.0.2
+Implementation-Title: junit
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: junit
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/junit
+Created-By: Maven Integration for Eclipse
+
